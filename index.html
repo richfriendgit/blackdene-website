@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Blackdene Consulting | Species Explorer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.5;
+    }
+    header {
+      background: #0b3d3b;
+      color: #ffffff;
+      padding: 1.5rem;
+    }
+    header h1 {
+      margin: 0 0 0.5rem 0;
+    }
+    nav a {
+      color: #ffffff;
+      margin-right: 1rem;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    main {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 1.5rem;
+    }
+    section {
+      margin-bottom: 2rem;
+    }
+    iframe {
+      width: 100%;
+      min-height: 650px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    footer {
+      background: #f3f3f3;
+      padding: 1rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #555555;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Blackdene Consulting</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#explorer">Species explorer</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="about">
+      <h2>About</h2>
+      <p>Blackdene Consulting specialises in botanical and peatland surveys, monitoring and reporting across the UK.</p>
+    </section>
+
+    <section id="services">
+      <h2>Services</h2>
+      <ul>
+        <li>Botanical and peatland surveys</li>
+        <li>Long-term vegetation monitoring</li>
+        <li>Data analysis and reporting</li>
+      </ul>
+    </section>
+
+    <section id="explorer">
+      <h2>Species explorer</h2>
+      <p>Use the interactive tool below to explore survey records over time.</p>
+      <iframe
+        src="https://YOUR-SHINY-APP-URL-GOES-HERE"
+        title="Species explorer"
+        loading="lazy"
+        referrerpolicy="no-referrer">
+      </iframe>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:rf@blackdene.co.uk">rf@blackdene.co.uk</a></p>
+    </section>
+  </main>
+
+  <footer>
+    © Blackdene Consulting Ltd
+  </footer>
+</body>
+</html>
