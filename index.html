@@ -1,41 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blackdene Consulting – Liverworts Explorer</title>
+  <meta charset="utf-8">
+  <title>Blackdene Consulting | Species Explorer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f5f5f5;
-        }
-        header {
-            background: #2d4d3a;
-            color: white;
-            padding: 20px;
-            text-align: center;
-            font-size: 1.5em;
-        }
-        iframe {
-            width: 100%;
-            height: 90vh; /* fills screen height */
-            border: none;
-        }
-    </style>
+  <style>
+    :root {
+      --green: #2d4d3a;
+      --light-green: #e3efe7;
+      --accent: #1b6ca8;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #f5f5f5;
+      color: #222;
+      line-height: 1.5;
+    }
+
+    header {
+      background: var(--green);
+      color: #ffffff;
+      padding: 1.5rem 1rem;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.8rem;
+    }
+
+    nav {
+      margin-top: 0.5rem;
+    }
+
+    nav a {
+      color: #ffffff;
+      margin-right: 1rem;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 1.5rem 1rem 3rem;
+    }
+
+    section {
+      margin-bottom: 2rem;
+      background: #ffffff;
+      padding: 1.25rem 1.5rem;
+      border-radius: 6px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+    }
+
+    section:nth-of-type(1) {
+      background: var(--light-green);
+    }
+
+    h2 {
+      margin-top: 0;
+      color: var(--green);
+    }
+
+    ul {
+      margin-top: 0.5rem;
+    }
+
+    iframe {
+      width: 100%;
+      min-height: 650px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    footer {
+      background: #eeeeee;
+      padding: 1rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #555555;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.4rem;
+      }
+      nav {
+        font-size: 0.9rem;
+      }
+    }
+  </style>
 </head>
-
 <body>
 
 <header>
-    Blackdene Consulting – Liverworts Explorer
+  <h1>Blackdene Consulting</h1>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#explorer">Species explorer</a>
+    <a href="#contact">Contact</a>
+  </nav>
 </header>
 
-<iframe 
-    src="https://richfriendshiny.shinyapps.io/Liverworts/"
-    title="Liverworts Shiny App">
-</iframe>
+<main>
+  <section id="about">
+    <h2>About</h2>
+    <p>
+      Blackdene Consulting specialises in botanical and peatland surveys, monitoring and reporting
+      across the UK, with a focus on high-quality field data and clear, practical outputs.
+    </p>
+  </section>
+
+  <section id="services">
+    <h2>Services</h2>
+    <ul>
+      <li>Botanical and peatland surveys</li>
+      <li>Long-term vegetation monitoring</li>
+      <li>Data analysis and reporting</li>
+      <li>Supporting evidence for management plans and funding bids</li>
+    </ul>
+  </section>
+
+  <section id="explorer">
+    <h2>Species explorer</h2>
+    <p>
+      The interactive liverwort explorer below draws on survey data and allows you to explore
+      records over time and space.
+    </p>
+    <iframe
+      src="https://richfriendshiny.shinyapps.io/Liverworts/"
+      title="Liverworts explorer"
+      loading="lazy"
+      referrerpolicy="no-referrer">
+    </iframe>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>
+      For survey work, collaboration or data requests, please get in touch:
+    </p>
+    <p>
+      Email: <a href="mailto:rf@blackdene.co.uk">rf@blackdene.co.uk</a>
+    </p>
+  </section>
+</main>
+
+<footer>
+  © Blackdene Consulting Ltd
+</footer>
 
 </body>
 </html>
